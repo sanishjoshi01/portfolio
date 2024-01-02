@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -10,12 +11,13 @@
     --secondary-clr: #8ECAE6;
     --link-hover-clr: #CAF0F8;
     --clr-white: white;
+    --clr-black: black;
 }
 
 body {
-    background-color: var(--primary-clr);
-    height: 200vh;
     position: relative;
+    background-color: var(--primary-clr);
+    scroll-behavior: smooth;
 }
 
 a {
@@ -27,7 +29,6 @@ li {
 }
 
 /* HEADER NAVIGATION*/
-
 header {
     position: sticky;
     top: 10px;
@@ -60,6 +61,46 @@ header {
     color: white !important;
 }
 
-section {
-    margin: 0 11%;
+/* FOR ALL  */
+#home-section,
+#about-section,
+#portfolio-section,
+#contact-section {
+    height: 100vh;
+}
+
+.content {
+    margin: 0 15%;
+}
+
+/* HOME  */
+#home-section {
+    background-color: var(--primary-clr);
+    --fs-heading: 3em;
+    font-size: var(--fs-heading);
+}
+
+
+/* ABOUT  */
+#about-section {
+    background-color: green;
+}
+
+/* PORTFOLIO  */
+#portfolio-section {
+    background-color: pink;
+}
+
+/* CONTACT  */
+#contact-section {
+    background-color: yellow;
+}
+
+/* FOOTER  */
+
+#footer-section {
+    background-color: var(--clr-black);
+    height: 150px;
+    color: var(--clr-white);
+    text-align: center;
 }
