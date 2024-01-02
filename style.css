@@ -30,36 +30,34 @@ li {
 
 header {
     position: sticky;
-    top: 30px;
+    top: 10px;
 }
 
 #nav-bar {
     width: 500px;
-    height: 60px;
+    height: 50px;
     border-radius: 30px;
-    margin: 30px auto;
+    margin: 20px auto;
     background-color: var(--secondary-clr);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: 0 0 10px 0 var(--secondary-clr);
 }
 
 #nav-bar li a {
     color: var(--primary-clr);
-
     font-weight: 600;
     text-transform: uppercase;
+    font-size: .9rem;
 }
 
-.active:hover {
-    background-color: var(--link-hover-clr);
+#nav-bar li a:hover {
+    color: white;
 }
 
 .active {
-    background-color: var(--link-hover-clr);
-    display: block;
-    padding: 10px 15px;
-    border-radius: 30px;
+    color: white !important;
 }
 
 section {
