@@ -9,14 +9,16 @@ links.forEach(function (link) {
     });
 });
 
-let menu = document.querySelector(".nav-bar");
-let menuBar = document.querySelector(".menu-bar");
+let menu = document.querySelector(".left-nav");
+let menuBar = document.querySelector(".left-nav-content-one");
 
 menu.addEventListener('click', function () {
-    if (menuBar.style.display = "block") {
-        menuBar.style.display = "none";
+    if (menuBar.style.display === "none") {
+        menu.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+        menuBar.style.display = "block";
     }
     else {
-        menuBar.style.display = "block";
+        menuBar.style.display = "none";
+        menu.innerHTML = `<i class="fa-solid fa-bars"></i>`;
     }
 });

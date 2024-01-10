@@ -36,32 +36,70 @@ header {
 }
 
 .nav-bar {
-    width: 500px;
-    height: 50px;
-    border-radius: 30px;
-    margin: 20px auto;
-    background-color: var(--secondary-clr);
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0 0 10px 0 var(--secondary-clr);
+    justify-content: space-between;
+    background-color: cyan;
+    width: min(90%, 1280px);
+    margin: 20px auto;
+    height: 50px;
+    padding: 0 1rem;
+    background-color: var(--secondary-clr);
+    position: relative;
+
 }
 
-.nav-bar li a {
+.left-nav {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-nav:hover {
+    background-color: white;
+}
+
+.left-nav-content {
+    display: none;
+}
+
+.right-nav li a {
     color: var(--primary-clr);
     font-weight: 600;
     text-transform: uppercase;
     font-size: .9rem;
 }
 
-.nav-bar li a:hover {
+.left-nav-content-one {
+    display: none;
+    position: absolute;
+    color: white;
+    top: 50px;
+    left: 0;
+    width: 50vw;
+    padding: 0rem 1rem;
+    background-color: var(--secondary-clr);
+    /* background-color: red; */
+}
+
+.left-nav-content-one li a {
+    color: var(--primary-clr);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .9rem;
+    line-height: 2rem;
+}
+
+.left-nav-content-one li a:hover {
     color: white;
 }
+
 
 .active {
     color: white !important;
 }
-
 
 /* FOR ALL  */
 #home-section,
@@ -161,7 +199,44 @@ header {
     }
 }
 
-@media(min-width: 890px) {}
+@media(min-width: 890px) {
+    .nav-bar {
+        width: 500px;
+        height: 50px;
+        border-radius: 30px;
+        margin: 20px auto;
+        background-color: var(--secondary-clr);
+        display: flex;
+        box-shadow: 0 0 10px 0 var(--secondary-clr);
+    }
+
+    .right-nav {
+        display: none;
+    }
+
+    .left-nav {
+        display: none;
+    }
+
+    .left-nav-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .nav-bar li a {
+        color: var(--primary-clr);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: .9rem;
+    }
+
+    .nav-bar li a:hover {
+        color: white;
+    }
+
+}
 
 
 

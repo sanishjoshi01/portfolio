@@ -14,16 +14,33 @@
         rel="stylesheet">
     <!-- LINKING CSS FILE -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <!-- NAVIGATION SECTION  -->
     <header>
         <div class="nav-bar">
-            <li><a class="active" href="#home-section">Home</a></li>
-            <li><a href="#about-section">About</a></li>
-            <li><a href="#portfolio-section">Portfolio</a></li>
-            <li><a href="#contact-section">Contact</a></li>
+            <div class="right-nav">
+                <li><a class="active" href="#home-section">Home</a></li>
+                <div class="left-nav-content-one" onclick="myFunction()">
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#portfolio-section">Portfolio</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </div>
+            </div>
+            <div class="left-nav">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="left-nav-content">
+                <li><a class="active" href="#home-section">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#portfolio-section">Portfolio</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </div>
         </div>
     </header>
 
