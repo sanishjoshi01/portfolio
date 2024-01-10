@@ -35,7 +35,7 @@ header {
     z-index: 999;
 }
 
-#nav-bar {
+.nav-bar {
     width: 500px;
     height: 50px;
     border-radius: 30px;
@@ -47,20 +47,21 @@ header {
     box-shadow: 0 0 10px 0 var(--secondary-clr);
 }
 
-#nav-bar li a {
+.nav-bar li a {
     color: var(--primary-clr);
     font-weight: 600;
     text-transform: uppercase;
     font-size: .9rem;
 }
 
-#nav-bar li a:hover {
+.nav-bar li a:hover {
     color: white;
 }
 
 .active {
     color: white !important;
 }
+
 
 /* FOR ALL  */
 #home-section,
@@ -70,22 +71,46 @@ header {
     height: 100vh;
 }
 
+
+/* UTILITY CLASSES */
 .content {
-    margin: 0 15%;
+    width: min(90%, 1280px);
+    margin: 0 auto;
+    background-color: red;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.outline {
+    outline: 3px solid var(--secondary-clr);
+    outline-style: dashed;
+}
+
+.main-title-heading {
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+}
 
 /* HOME  */
 #home-section {
     background-color: var(--primary-clr);
+    outline: 1px solid red;
+}
+
+.hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
-    padding-top: 50px;
+    justify-content: space-evenly;
 }
 
-.hello-gif {}
+.hello-gif img {
+    width: 300px;
+    height: 300px;
+}
 
 .letter-animate {
     transition: transform .9s ease-in-out, scale 1s linear;
@@ -96,19 +121,8 @@ header {
     display: inline-block;
     cursor: pointer;
     color: white;
-    font-size: 6rem;
+    font-size: min(7vw, 5rem);
     font-weight: 900;
-    line-height: 7rem;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.outline {
-    outline: 3px solid var(--secondary-clr);
-    padding: 20px;
-    outline-style: dashed;
 }
 
 .letter-animate:hover {
@@ -117,6 +131,7 @@ header {
     color: var(--secondary-clr);
 }
 
+/* GO ABOUT SECTION BUTTON  */
 .go-bot-wrapper {
     margin-top: 30px;
     width: 40px;
@@ -126,6 +141,7 @@ header {
     border-radius: 30px;
     display: flex;
     justify-content: center;
+    background-color: green;
 }
 
 .go-bot-circle {
@@ -138,25 +154,42 @@ header {
     animation: ani 1s ease-in-out infinite alternate;
 }
 
+
 @keyframes ani {
     to {
         top: 33px;
     }
 }
 
+@media(min-width: 890px) {}
+
+
+
+
+
+
+
+
+
+
+
 /* ABOUT  */
 #about-section {
-    background-color: green;
+    /* background-color: green; */
+    padding-top: 100px;
 }
+
 
 /* PORTFOLIO  */
 #portfolio-section {
     background-color: pink;
+    padding-top: 100px;
 }
 
 /* CONTACT  */
 #contact-section {
     background-color: yellow;
+    padding-top: 100px;
 }
 
 /* FOOTER  */
