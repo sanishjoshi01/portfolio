@@ -58,7 +58,7 @@ header {
 }
 
 .left-nav:hover {
-    background-color: white;
+    background-color: var(--clr-white);
 }
 
 .left-nav-content {
@@ -102,19 +102,17 @@ header {
 }
 
 /* FOR ALL  */
-#home-section,
 #about-section,
 #portfolio-section,
 #contact-section {
     height: 100vh;
 }
 
-
 /* UTILITY CLASSES */
 .content {
     width: min(90%, 1280px);
     margin: 0 auto;
-    background-color: red;
+    height: 100%;
 }
 
 .text-center {
@@ -124,21 +122,23 @@ header {
 .outline {
     outline: 3px solid var(--secondary-clr);
     outline-style: dashed;
+    padding: 0 1rem;
 }
 
 .main-title-heading {
-    font-size: 3rem;
+    font-size: min(7vw, 3rem);
     color: white;
     text-transform: uppercase;
 }
 
 /* HOME  */
 #home-section {
+    height: 90vh;
     background-color: var(--primary-clr);
-    outline: 1px solid red;
 }
 
 .hero-content {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,8 +146,12 @@ header {
 }
 
 .hello-gif img {
-    width: 300px;
-    height: 300px;
+    width: min(300px, 100%);
+    height: min(300px, 100%);
+}
+
+.letter-redpink {
+    color: #D81159 !important;
 }
 
 .letter-animate {
@@ -159,7 +163,7 @@ header {
     display: inline-block;
     cursor: pointer;
     color: white;
-    font-size: min(7vw, 5rem);
+    font-size: min(8vw, 5rem);
     font-weight: 900;
 }
 
@@ -173,13 +177,12 @@ header {
 .go-bot-wrapper {
     margin-top: 30px;
     width: 40px;
-    position: relative;
     height: 60px;
+    position: relative;
     border: 3px solid var(--clr-white);
     border-radius: 30px;
     display: flex;
     justify-content: center;
-    background-color: green;
 }
 
 .go-bot-circle {
@@ -241,30 +244,71 @@ header {
 
 
 
-
-
-
-
-
-
-
 /* ABOUT  */
 #about-section {
     /* background-color: green; */
-    padding-top: 100px;
+    padding-top: 90px;
 }
+
+.about-content {
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-content span {
+    margin-top: -5rem;
+    font-size: min(5vw, 3rem);
+    color: #D81159;
+    font-weight: 500;
+}
+
+.about-content h1 {
+    font-size: min(5vw, 5rem);
+}
+
+.about-content p {
+    font-size: min(5vw, 2rem);
+    font-weight: 200;
+}
+
+.icon-container a {
+    color: white;
+}
+
+.icon-container a i {
+    font-size: min(5vw, 2.5rem);
+    margin: 0 1rem;
+}
+
+
+
 
 
 /* PORTFOLIO  */
 #portfolio-section {
-    background-color: pink;
-    padding-top: 100px;
+    padding-top: 90px;
+    outline: 1px solid red;
 }
+
+.project-content {
+    height: 100%;
+    background-color: red;
+}
+
+
+
+
+
 
 /* CONTACT  */
 #contact-section {
     background-color: yellow;
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
 /* FOOTER  */
