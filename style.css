@@ -295,6 +295,7 @@ header {
     display: inline-block;
     text-decoration: none;
     color: var(--clr-white);
+    text-transform: uppercase;
 }
 
 
