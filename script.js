@@ -33,3 +33,21 @@ console.log(headingDecor);
 headingDecor.forEach(heading => {
     heading.innerHTML = '&lt;&lt;&lt; ' + heading.textContent + ' &gt;&gt;&gt;';
 });
+
+
+
+
+// project card from js
+
+/* <div class="project-card">
+    <div class="img-container"></div>
+    <p>Daraz Clone</p>
+    <div class="middle">
+        <a href="#">Live Preview <i class="fa-solid fa-link"></i></a>
+    </div>
+</div> */
+
+// let projectContentEl = document.querySelector('.project-content');
+
+// let contHolder = ""
+// const projectImg = ["dara"];
