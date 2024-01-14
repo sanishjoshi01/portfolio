@@ -51,3 +51,15 @@ headingDecor.forEach(heading => {
 
 // let contHolder = ""
 // const projectImg = ["dara"];
+
+
+//loading on and off
+const downloadBtn = document.querySelector('.download-cv a');
+const loader = document.querySelector('.loader-inner');
+
+downloadBtn.addEventListener('click', () => {
+    loader.style.opacity = '1';
+    setTimeout(() => {
+        loader.style.opacity = '0';
+    }, 3000);
+});

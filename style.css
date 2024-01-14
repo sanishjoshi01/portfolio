@@ -30,6 +30,7 @@ li {
     list-style: none;
 }
 
+
 /* HEADER NAVIGATION*/
 header {
     position: sticky;
@@ -288,6 +289,11 @@ header {
     margin: 0 1rem;
 }
 
+.download-cv {
+    margin-top: 1rem;
+    position: relative;
+}
+
 .download-cv a {
     background-color: var(--accent-clr);
     border-radius: 20px;
@@ -298,6 +304,39 @@ header {
     text-transform: uppercase;
 }
 
+.download-cv a:focus {
+    outline: 2px solid white
+}
+
+/* LOADING ANIMATION */
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+}
+
+.loader-inner {
+    opacity: 0;
+    width: 60px;
+    height: 60px;
+    border: 10px solid transparent;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 
 
