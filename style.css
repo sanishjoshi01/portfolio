@@ -12,8 +12,8 @@
     --secondary-clr-30-opacity: rgba(142, 202, 230, 0.3);
     --link-hover-clr: #CAF0F8;
     --accent-clr: #D81159;
-    --clr-white: white;
-    --clr-black: black;
+    --clr-white: #fff;
+    --clr-black: #000;
 }
 
 body {
@@ -280,12 +280,21 @@ header {
 }
 
 .icon-container a {
-    color: white;
+    color: var(--clr-white);
 }
 
 .icon-container a i {
     font-size: min(5vw, 2.5rem);
     margin: 0 1rem;
+}
+
+.download-cv a {
+    background-color: var(--accent-clr);
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-white);
 }
 
 
