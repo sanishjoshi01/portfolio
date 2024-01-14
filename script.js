@@ -1,5 +1,5 @@
 // MENU ITEMS ON ACTIVE COLOR WHITE
-let links = document.querySelectorAll('#nav-bar li a');
+let links = document.querySelectorAll('.left-nav-content li a');
 
 links.forEach(function (link) {
     link.addEventListener('click', function () {
