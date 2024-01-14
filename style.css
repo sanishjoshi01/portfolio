@@ -305,8 +305,15 @@ header {
     flex-wrap: wrap;
 }
 
+.project-content:nth-child(1) {
+    border-right: 1px solid green;
+}
+
 /* //UTIL */
-.tag-maker {}
+.tag-maker {
+    margin-top: 3px;
+    text-align: center;
+}
 
 .tag-item {
     background-color: var(--accent-clr);
@@ -352,9 +359,32 @@ header {
     transform: translate(-50%, -50%);
 }
 
+.tech-stack-icons {
+    font-size: 3rem;
+    background-color: cyan;
+    color: rgb(250, 62, 0);
+}
+
+.bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom i {
+    font-size: 3rem;
+}
+
+
 .middle a {
     display: inline-block;
-    background-color: var(--accent-clr);
+    background-color: var(--secondary-clr);
     color: white;
     text-align: center;
     width: 150px;
@@ -365,12 +395,22 @@ header {
 }
 
 .project-card:hover .img-container img {
-    opacity: 0.3;
+    opacity: 0.1;
+}
+
+.project-card:hover .bottom {
+    opacity: 1;
+}
+
+.project-card:hover .bottom img {
+    opacity: 1;
 }
 
 .project-card:hover .middle {
     opacity: 1;
 }
+
+
 
 
 
@@ -418,7 +458,8 @@ form textarea {
     border-radius: 10px;
     display: inline-block;
     height: 150px;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
+
 }
 
 form button {
