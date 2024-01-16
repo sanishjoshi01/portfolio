@@ -31,13 +31,18 @@ li {
 }
 
 
-/* HEADER NAVIGATION*/
+
+/* 
+    HEADER NAVIGATION
+*/
 header {
     position: sticky;
     top: 20px;
     z-index: 999;
 }
 
+
+/* MOBILE NAV BAR  */
 .nav-bar {
     display: flex;
     align-items: center;
@@ -49,7 +54,7 @@ header {
     padding: 0 1rem;
     background-color: var(--secondary-clr);
     position: relative;
-
+    box-shadow: 0 0 10px 0 var(--secondary-clr);
 }
 
 .left-nav {
@@ -76,7 +81,7 @@ header {
 }
 
 .left-nav-content-one {
-    display: none;
+    opacity: 0;
     position: absolute;
     color: white;
     top: 50px;
@@ -84,7 +89,9 @@ header {
     width: 50vw;
     padding: 0rem 1rem;
     background-color: var(--secondary-clr);
+    box-shadow: 0 0 10px 0 var(--secondary-clr);
     /* background-color: red; */
+    transition: all .5s ease-in-out;
 }
 
 .left-nav-content-one li a {
@@ -198,6 +205,8 @@ header {
 }
 
 @media(min-width: 890px) {
+
+    /* DESKTOP NAV  */
     .nav-bar {
         width: 500px;
         height: 50px;
@@ -205,7 +214,15 @@ header {
         margin: 20px auto;
         background-color: var(--secondary-clr);
         display: flex;
+        align-items: center;
         box-shadow: 0 0 10px 0 var(--secondary-clr);
+    }
+
+    .theme-button {
+        cursor: pointer;
+        width: 40px;
+        text-align: center;
+        height: auto;
     }
 
     .right-nav {
@@ -572,8 +589,11 @@ form button {
     }
 }
 
-input:focus,
-textarea:focus,
-button:focus {
+form input:focus,
+form textarea:focus {
     outline: none;
+}
+
+form button:focus {
+    outline: 1px solid white;
 }
