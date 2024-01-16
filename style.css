@@ -22,6 +22,7 @@ body {
     position: relative;
     background-color: var(--primary-clr);
     scroll-behavior: smooth;
+    --outline: none;
     --primary-clr: #023047;
     --secondary-clr: #8ECAE6;
     --secondary-clr-30-opacity: rgba(142, 202, 230, 0.3);
@@ -33,6 +34,7 @@ body {
 
 .light-theme {
     --primary-clr: #F5EEE6;
+    --outline: 1px solid #023047;
     --secondary-clr: #8ECAE6;
     --secondary-clr-30-opacity: rgba(142, 202, 230, 0.3);
     --link-hover-clr: #CAF0F8;
@@ -409,8 +411,9 @@ PORTFOLIO SECTION
 .project-card .img-container img {
     height: 300px;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
     object-fit: cover;
+    outline: var(--outline);
 }
 
 .img-container .middle {
@@ -429,6 +432,11 @@ PORTFOLIO SECTION
     text-align: center;
     padding: .5rem;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+#myBtn {
+    border: none;
 }
 
 .img-container .bottom {
@@ -470,6 +478,7 @@ PORTFOLIO SECTION
 
 .project-card:hover .img-container img {
     opacity: 0.2;
+    outline: none;
 }
 
 .project-card:hover .middle {
@@ -524,7 +533,6 @@ game modal
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -564,15 +572,15 @@ TIC TAC TOE GAME
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 300px;
     margin: 5rem auto;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
 .game-container button {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     font-size: larger;
     border-radius: 20px;
     border: 3px solid black;
