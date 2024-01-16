@@ -32,18 +32,18 @@ links.forEach(function (link) {
 
 //dark mode light mode
 let themeBtn = document.querySelector(".nav-bar .theme-button");
-
-console.log(themeBtn);
+let body = document.querySelector('body');
 
 themeBtn.addEventListener('click', () => {
     if (themeBtn.innerHTML === `<i class="fa-regular fa-sun"></i>`) {
         themeBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+        body.classList.remove("light-theme");
     }
     else {
         themeBtn.innerHTML = `<i class="fa-regular fa-sun"></i>`;
+        body.classList.add("light-theme");
     }
 });
-
 
 
 
@@ -84,3 +84,109 @@ downloadBtn.addEventListener('click', () => {
         loader.style.opacity = '0';
     }, 3000);
 });
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+let boxes = document.querySelectorAll('.box');
+let resetBtn = document.querySelector('#reset');
+let newGameBtn = document.querySelector('#new-game');
+let msgContainer = document.querySelector('.msg-container');
+let msg = document.querySelector('.msg');
+
+let playerX = true;
+
+let winPatterns = [
+    [0, 1, 2],
+    [0, 3, 6],
+    [0, 4, 8],
+    [1, 4, 7],
+    [2, 5, 8],
+    [2, 4, 6],
+    [3, 5, 4],
+    [6, 7, 8],
+];
+
+const resetGame = () => {
+    playerX = true;
+    enableBoxes();
+    msgContainer.classList.add("hide");
+}
+
+boxes.forEach((box) => {
+    box.addEventListener("click", () => {
+        if (playerX) {
+            box.innerText = "X";
+            playerX = false;
+        }
+        else {
+            box.innerText = "O";
+            playerX = true;
+        }
+        box.disabled = true;
+
+        checkWinner();
+    });
+});
+
+const disableBoxes = () => {
+    for (let box of boxes) {
+        box.disabled = true;
+    }
+}
+
+const enableBoxes = () => {
+    for (let box of boxes) {
+        box.disabled = false;
+        box.innerText = "";
+    }
+}
+
+const showWinner = (winner) => {
+    msg.innerText = `Congratulation, Winner is ${winner}`;
+    msgContainer.classList.remove("hide");
+    disableBoxes();
+}
+
+const checkWinner = () => {
+    for (let pattern of winPatterns) {
+        console.log(pattern[0]);
+        let pos1Val = boxes[pattern[0]].innerText;
+        let pos2Val = boxes[pattern[1]].innerText;
+        let pos3Val = boxes[pattern[2]].innerText;
+
+        if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
+            if (pos1Val === pos2Val && pos2Val === pos3Val) {
+                showWinner(pos1Val);
+            }
+        }
+    }
+}
+
+newGameBtn.addEventListener("click", resetGame);
+resetBtn.addEventListener("click", resetGame);
