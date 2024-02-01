@@ -1,0 +1,235 @@
+/*
+
+PORTFOLIO SECTION
+
+*/
+#portfolio-section {
+    padding-top: 90px;
+}
+
+.project-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 4rem 0;
+}
+
+.project-card {
+    width: 400px;
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* space on top between 1st row and 2nd row the wrapped items */
+    margin-top: 1.2rem;
+}
+
+.project-card .img-container {
+    position: relative;
+}
+
+.project-card .img-container img {
+    height: 300px;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    outline: var(--outline);
+}
+
+.img-container .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-container .middle a {
+    display: inline-block;
+    background-color: var(--secondary-clr);
+    color: var(--clr-black-links);
+    text-align: center;
+    padding: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#myBtn {
+    border: none;
+}
+
+.img-container .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+}
+
+.img-container .bottom i {
+    font-size: 3rem;
+}
+
+.tag-maker {
+    margin-top: 3px;
+    text-align: center;
+}
+
+.tag-item {
+    color: var(--clr-white-links);
+    background-color: var(--accent-clr);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.project-card h2 {
+    margin-top: 10px;
+    font-size: min(5vw, 1.5rem);
+}
+
+.project-card p {
+    font-size: min(3vw, 1rem);
+}
+
+.project-card:hover .img-container img {
+    opacity: 0.2;
+    outline: none;
+}
+
+.project-card:hover .middle {
+    opacity: 1;
+}
+
+.project-card:hover .bottom {
+    opacity: 1;
+}
+
+@media(max-width: 500px) {
+    .project-content {
+        padding: 0;
+    }
+
+    .project-card .img-container img {
+        height: 100%;
+    }
+
+    .img-container .middle a {
+        font-size: .6rem;
+        padding: 0.2rem .5rem;
+    }
+
+    .img-container .bottom i {
+        font-size: 2rem;
+    }
+
+    .tag-maker {
+        font-size: .6rem;
+    }
+}
+
+@media(max-width: 300px) {
+    .img-container .bottom i {
+        font-size: 1.5rem;
+    }
+}
+
+
+/*
+
+game modal  
+
+*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 
+
+TIC TAC TOE GAME  
+
+*/
+.main {
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin: 5rem auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.game-container button {
+    width: 80px;
+    height: 80px;
+    font-size: larger;
+    border-radius: 20px;
+    border: 3px solid black;
+    background-color: paleturquoise;
+    color: black;
+}
+
+.game-container button:disabled {
+    background-color: rgba(175, 238, 238, 0.3);
+
+}
+
+.msg {
+    font-size: 1.2rem;
+}
+
+.hide {
+    display: none;
+}
+
+#new-game,
+#reset {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    background-color: crimson;
+    color: white;
+    border: none;
+    font-weight: 500;
+    border-radius: 30px;
+}

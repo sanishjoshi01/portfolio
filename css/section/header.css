@@ -1,0 +1,218 @@
+/* 
+    HEADER NAVIGATION
+*/
+header {
+    position: sticky;
+    top: 20px;
+    z-index: 999;
+}
+
+/* MOBILE NAV BAR  */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(90%, 1280px);
+    margin: 20px auto;
+    height: 50px;
+    padding: 0 1rem;
+    background-color: var(--secondary-clr);
+    position: relative;
+    box-shadow: 0 0 10px 0 var(--secondary-clr);
+}
+
+.left-nav {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-nav:hover {
+    background-color: var(--clr-white);
+}
+
+.left-nav-content {
+    display: none;
+}
+
+.right-nav li a {
+    color: var(--primary-clr);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.left-nav-content-one {
+    opacity: 0;
+    position: absolute;
+    color: var(--clr-white);
+    top: 50px;
+    left: 0;
+    width: 50vw;
+    padding: 0rem 1rem;
+    background-color: var(--secondary-clr);
+    box-shadow: 0 0 10px 0 var(--secondary-clr);
+    /* background-color: red; */
+    transition: all .5s ease-in-out;
+}
+
+.left-nav-content-one li a {
+    color: var(--primary-clr);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .9rem;
+    line-height: 2rem;
+}
+
+.left-nav-content-one li a:hover {
+    color: var(--clr-white);
+}
+
+.active {
+    color: var(--clr-white) !important;
+}
+
+/* UTILITY CLASSES */
+.content {
+    width: min(90%, 1280px);
+    margin: 0 auto;
+    height: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.outline {
+    outline: 3px solid var(--secondary-clr);
+    outline-style: dashed;
+    padding: 0 1rem;
+}
+
+.main-title-heading {
+    font-size: min(5vw, 2rem);
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* HOME  */
+#home-section {
+    height: 90vh;
+    background-color: var(--primary-clr);
+}
+
+.hero-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hello-gif img {
+    width: min(300px, 100%);
+    height: min(300px, 100%);
+}
+
+.letter-redpink {
+    color: var(--accent-clr) !important;
+}
+
+.letter-animate {
+    transition: transform .9s ease-in-out, scale 1s linear;
+}
+
+.letter-animate,
+.letter-no-animate {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--clr-white);
+    font-size: min(8vw, 5rem);
+    font-weight: 900;
+}
+
+.letter-animate:hover {
+    transform: rotate(360deg);
+    scale: 1.2;
+    color: var(--secondary-clr);
+}
+
+/* GO ABOUT SECTION BUTTON  */
+.go-bot-wrapper {
+    margin-top: 30px;
+    width: 40px;
+    height: 60px;
+    position: relative;
+    border: 3px solid var(--clr-white);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.go-bot-circle {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--secondary-clr);
+    animation: ani 1s ease-in-out infinite alternate;
+}
+
+@keyframes ani {
+    to {
+        top: 33px;
+    }
+}
+
+@media(min-width: 890px) {
+
+    /* DESKTOP NAV  */
+    .nav-bar {
+        width: 500px;
+        height: 50px;
+        border-radius: 30px;
+        margin: 20px auto;
+        background-color: var(--secondary-clr);
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 10px 0 var(--secondary-clr);
+    }
+
+    .theme-button {
+        cursor: pointer;
+        width: 40px;
+        text-align: center;
+        height: auto;
+    }
+
+    .right-nav {
+        display: none;
+    }
+
+    .left-nav {
+        display: none;
+    }
+
+    .left-nav-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .nav-bar li a {
+        color: var(--primary-clr);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: .9rem;
+    }
+
+    .nav-bar li a:hover {
+        color: var(--clr-white);
+    }
+
+}
