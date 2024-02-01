@@ -1,0 +1,25 @@
+/* UTILITY CLASSES */
+.content {
+    width: min(90%, 1280px);
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.outline {
+    outline: 3px solid var(--secondary-clr);
+    outline-style: dashed;
+    padding: 0 1rem;
+}
+
+.main-title-heading {
+    font-size: min(5vw, 2rem);
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-weight: 400;
+}

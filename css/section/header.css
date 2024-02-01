@@ -1,6 +1,13 @@
 /* 
     HEADER NAVIGATION
 */
+body {
+    position: relative;
+    background-color: var(--primary-clr);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 header {
     position: sticky;
     top: 20px;
@@ -74,105 +81,12 @@ header {
     color: var(--clr-white) !important;
 }
 
-/* UTILITY CLASSES */
-.content {
-    width: min(90%, 1280px);
-    margin: 0 auto;
-    height: 100%;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.outline {
-    outline: 3px solid var(--secondary-clr);
-    outline-style: dashed;
-    padding: 0 1rem;
-}
-
-.main-title-heading {
-    font-size: min(5vw, 2rem);
-    color: var(--clr-white);
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-/* HOME  */
-#home-section {
-    height: 90vh;
-    background-color: var(--primary-clr);
-}
-
-.hero-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.hello-gif img {
-    width: min(300px, 100%);
-    height: min(300px, 100%);
-}
-
-.letter-redpink {
-    color: var(--accent-clr) !important;
-}
-
-.letter-animate {
-    transition: transform .9s ease-in-out, scale 1s linear;
-}
-
-.letter-animate,
-.letter-no-animate {
-    display: inline-block;
-    cursor: pointer;
-    color: var(--clr-white);
-    font-size: min(8vw, 5rem);
-    font-weight: 900;
-}
-
-.letter-animate:hover {
-    transform: rotate(360deg);
-    scale: 1.2;
-    color: var(--secondary-clr);
-}
-
-/* GO ABOUT SECTION BUTTON  */
-.go-bot-wrapper {
-    margin-top: 30px;
-    width: 40px;
-    height: 60px;
-    position: relative;
-    border: 3px solid var(--clr-white);
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.go-bot-circle {
-    position: absolute;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--secondary-clr);
-    animation: ani 1s ease-in-out infinite alternate;
-}
-
-@keyframes ani {
-    to {
-        top: 33px;
-    }
-}
-
+/* NAV BAR RESPONSIVENESS  */
 @media(min-width: 890px) {
 
     /* DESKTOP NAV  */
     .nav-bar {
-        width: 500px;
+        width: 600px;
         height: 50px;
         border-radius: 30px;
         margin: 20px auto;
@@ -214,5 +128,4 @@ header {
     .nav-bar li a:hover {
         color: var(--clr-white);
     }
-
 }

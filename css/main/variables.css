@@ -1,7 +1,4 @@
 body {
-    position: relative;
-    background-color: var(--primary-clr);
-    scroll-behavior: smooth;
     --outline: none;
     --primary-clr: #023047;
     --secondary-clr: #8ECAE6;
