@@ -20,6 +20,5 @@
 .main-title-heading {
     font-size: min(5vw, 2rem);
     color: var(--clr-white);
-    text-transform: uppercase;
     font-weight: 400;
 }
