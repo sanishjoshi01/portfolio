@@ -6,236 +6,374 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
-    <!-- POPPINS FONT FROM GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <!-- linking all the required css files  -->
+    <link rel="stylesheet" href="css/main/variable.css">
+    <link rel="stylesheet" href="css/main/reset.css">
+    <link rel="stylesheet" href="css/main/util.css">
 
-    <!-- FONTAWESOME  -->
+    <!-- linking all the section's css files -->
+    <link rel="stylesheet" href="css/section/header.css">
+    <link rel="stylesheet" href="css/section/about.css">
+    <link rel="stylesheet" href="css/section/skill.css">
+    <link rel="stylesheet" href="css/section/project.css">
+    <link rel="stylesheet" href="css/section/service.css">
+    <link rel="stylesheet" href="css/section/contact.css">
+    <link rel="stylesheet" href="css/section/footer.css">
+
+    <!-- linking font awesome cdn for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- LINKING CSS FILE -->
-    <link rel="stylesheet" href="./css/main/reset.css">
-    <link rel="stylesheet" href="./css/main/variables.css">
-    <link rel="stylesheet" href="./css/main/utility.css">
-
-    <link rel="stylesheet" href="./css/section/header.css">
-    <link rel="stylesheet" href="./css/section/hero.css">
-    <link rel="stylesheet" href="./css/section/about.css">
-    <link rel="stylesheet" href="./css/section/project.css">
-    <link rel="stylesheet" href="./css/section/contact.css">
-
 </head>
 
-<body class="">
-    <!-- NAVIGATION SECTION  -->
-    <header>
-        <div class="nav-bar">
-            <div class="right-nav">
-                <li><a class="active" href="#">Home</a></li>
-                <div class="left-nav-content-one" onclick="myFunction()">
-                    <li><a href="#about-section">About</a></li>
-                    <li><a href="#skill-section">Skills</a></li>
-                    <li><a href="#portfolio-section">Portfolio</a></li>
-                    <li><a href="#contact-section">Contact</a></li>
-                </div>
-            </div>
-
-            <div class="left-nav">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="left-nav-content">
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#skill-section">Skill</a></li>
-                <li><a href="#portfolio-section">Portfolio</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-            </div>
-
-            <div class="theme-button">
-                <i class="fa-solid fa-moon"></i>
-            </div>
-        </div>
-    </header>
-
-    <!-- HOME SECTION  -->
-    <section id="home-section">
-        <div class="content">
-            <div class="hero-content">
-                <div class="hello-gif">
-                    <img src="images/hello.gif" alt="">
-                </div>
-                <div class="text-center outline">
-                    <span class="letter-no-animate">"</span>
-                    <span class="letter-animate">H</span>
-                    <span class="letter-animate">E</span>
-                    <span class="letter-animate">L</span>
-                    <span class="letter-animate">L</span>
-                    <span class="letter-animate">O</span>
-                    <span class="letter-no-animate">,</span>
-                    <span class="letter-animate"> </span>
-                    <span class="letter-animate letter-redpink">W</span>
-                    <span class="letter-animate letter-redpink">O</span>
-                    <span class="letter-animate letter-redpink">R</span>
-                    <span class="letter-animate letter-redpink">L</span>
-                    <span class="letter-animate letter-redpink">D</span>
-                    <span class="letter-no-animate">"</span>
-                </div>
-                <a class="go-bot-wrapper" href="#about-section">
-                    <div class="go-bot-circle"></div>
+<body>
+    <header id="header-section">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="LOGO">
+                    <span class="animate" style="--i:1">s</span>
+                    <span class="animate" style="--i:2">a</span>
+                    <span class="animate" style="--i:3">n</span>
+                    <span class="animate" style="--i:4">d</span>
+                    <span class="animate" style="--i:5">e</span>
+                    <span class="animate" style="--i:6">s</span>
+                    <span class="animate" style="--i:7">h</span>
                 </a>
             </div>
-        </div>
-    </section>
 
-    <!-- ABOUT SECTION  -->
+            <ul class="menu">
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#about-section">
+                    <li>About</li>
+                </a>
+                <a href="#skill-section">
+                    <li>Skills</li>
+                </a>
+                <a href="#project-section">
+                    <li>Project</li>
+                </a>
+                <a href="#contact-section">
+                    <li>Contact</li>
+                </a>
+            </ul>
+            <a id="btn" onclick="show()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+    </header>
     <section id="about-section">
-        <div class="content">
-            <h1 class="text-center main-title-heading">About me</h1>
-            <div class="about-content">
-                <span>I AM</span>
-                <h1>SANDESH JOSHI</h1>
-                <p>FRONT-END DEVELOPER</p>
-                <div class="icon-container">
-                    <a href="https://www.facebook.com/Sanish.j1/" target="_blank"><i
-                            class="fa-brands fa-facebook"></i></a>
-                    <a href="https://github.com/sanishjoshi01" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <div class="about-container">
+            <div class="info">
+                <div class="name">
+                    <h1>Sandesh Joshi</h1>
+                </div>
+                <div class="detail">
+                    <p>Hi, my name is Sandesh Joshi. I am a</p>
+                    <p>Front-End Developer,</p>
+                    <p>UI/UX Designer,</p>
+                    <p>Web Designer</p>
+                </div>
+                <div class="buttons">
+                    <a href="download/SANDESH CV 2024.pdf" download>Download Resume</a>
+                    <a href="#contact-section">Hire Me</a>
+                </div>
+                <div class="socials">
                     <a href="https://www.linkedin.com/in/sandesh-joshi-538110200/" target="_blank"><i
                             class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/sanishjoshi01" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/Sanish.j1/" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
                 </div>
-                <div class="download-cv">
-                    <a href="download/SANDESH CV 2024.pdf" download>Download cv</a>
-                    <div class="loader">
-                        <div class="loader-inner"></div>
+            </div>
+            <div class="image">
+                <div class="img-holder">
+                    <img src="images/me.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skill-section">
+        <div class="skill-container">
+            <div class="title center">
+                <h2 class="headings">My skills</h2>
+                <p class="para">I am confident using on following technologies</p>
+            </div>
+            <div class="content">
+                <div class="scaler-box">
+                    <p>100%</p>
+                    <p>0%</p>
+                </div>
+                <div class="skill-box">
+                    <div class="html-box rectangle">
+                        <p>90%</p>
+                        <img src="images/html.png" alt="image">
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="css-box rectangle">
+                        <p>90%</p>
+                        <img src="images/css.png" alt="image">
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="js-box rectangle">
+                        <p>80%</p>
+                        <img src="images/js.png" alt="image">
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="bootstrap-box rectangle">
+                        <p>85%</p>
+                        <img src="images/bootstrap.png" alt="image">
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="github-box rectangle">
+                        <p>80%</p>
+                        <img src="images/github.png" alt="image">
+                    </div>
+                </div>
+            </div>
+            <p class="para center">I have also worked on these technologies</p>
+            <div class="content">
+                <div class="scaler-box">
+                    <p>100%</p>
+                    <p>0%</p>
+                </div>
+                <div class="skill-box">
+                    <div class="php-box rectangle">
+                        <p>70%</p>
+                        <img src="images/php.png" alt="image">
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="laravel-box rectangle">
+                        <p>60%</p>
+                        <img src="images/laravel.png" alt="image">
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="ai-box rectangle">
+                        <p>60%</p>
+                        <img src="images/ai.png" alt="image">
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="ps-box rectangle">
+                        <p>80%</p>
+                        <img src="images/photoshop.png" alt="image">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="main">
-                <div class="msg-container hide">
-                    <p class="msg">Winner</p>
-                    <button id="new-game">new game</button>
-                </div>
-                <h1>TIC-TAC-TOE</h1>
-                <div class="game-container">
-                    <button class="box" value="1"></button>
-                    <button class="box" value="2"></button>
-                    <button class="box" value="3"></button>
-                    <button class="box" value="4"></button>
-                    <button class="box" value="5"></button>
-                    <button class="box" value="6"></button>
-                    <button class="box" value="7"></button>
-                    <button class="box" value="8"></button>
-                    <button class="box" value="9"></button>
-                </div>
-                <button id="reset">reset game</button>
+    <section id="project-section">
+        <div class="project-container">
+            <div class="title center">
+                <h2 class="headings">Projects</h2>
+                <p class="para">Some of my recent projects</p>
             </div>
-        </div>
-    </div>
-    <!-- PORTFOLIO SECTION  -->
-    <section id="portfolio-section">
-        <div class="content">
-            <h1 class="text-center main-title-heading">Projects</h1>
-            <div class="project-content">
-                <div class="project-card">
-                    <div class="img-container">
-                        <img src="images/daraz.png" alt="">
-
-                        <div class="middle">
-                            <a href="https://sanishjoshi01.github.io/daraz-clone/" target="_blank">Live Preview <i
-                                    class="fa-solid fa-link fa-beat"></i></a>
+            <div class="content">
+                <div class="project-cards-wrapper">
+                    <div class="project-card">
+                        <div class="project-left">
+                            <div class="project-detail">
+                                <h2>Daraz Clone</h2>
+                                <p>UI replication of South Asia's leading ecommerce marketplace.</p>
+                            </div>
+                            <div class="tech-stacks">
+                                <span>
+                                    <i class="fa-solid fa-circle clr-html"></i>
+                                    <p>HTML</p>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-circle clr-css"></i>
+                                    <p>CSS</p>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-circle clr-js"></i>
+                                    <p>JS</p>
+                                </span>
+                            </div>
                         </div>
-
-                        <div class="bottom">
-                            <i class="fa-brands fa-html5" style="color: #fc4a0b;"></i>
-                            <i class="fa-brands fa-css3-alt" style="color: #3293d4;"></i>
-                            <i class=" fa-brands fa-js" style="color: #f7df1e;"></i>
-                        </div>
-                    </div>
-
-                    <span class="tag-maker">
-                        <span class="tag-item">Personal Project</span>
-                    </span>
-
-                    <h2>Daraz Clone</h2>
-                    <p class="info">Replica of South Asia's leading e-commerce marketplace</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="img-container">
-                        <img src="images/ezfresh.png" alt="">
-                        <div class="middle">
-                            <a href="https://ezfresh.000webhostapp.com/index.php" target="_blank">Live Preview <i
-                                    class="fa-solid fa-link fa-beat"></i></a>
-                        </div>
-                        <div class="bottom">
-                            <i class=" fa-brands fa-bootstrap" style="color: #7574e5;"></i>
-                            <i class=" fa-brands fa-js" style="color: #f7df1e;"></i>
-                            <i class="fa-brands fa-php" style="color: #3765af;"></i>
-                            <i class="fa-solid fa-database" style="color: #f4740b;"></i>
+                        <div class="project-right">
+                            <a href="https://sanishjoshi01.github.io/daraz-clone/" target="_blank"><i
+                                    class="fa-solid fa-location-arrow"></i></a>
+                            <a href="https://github.com/sanishjoshi01/daraz-clone" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
 
-                    <span class="tag-maker">
-                        <span class="tag-item">College Project</span>
-                    </span>
-                    <h2>EzFresh</h2>
-                    <p class="info">E-commerce shop for fresh groceries and foods: <q>Buy Smart, Buy Fresh</q></p>
-                </div>
-
-                <div class="project-card">
-                    <div class="img-container">
-                        <img src="images/ttt.jpg" alt="">
-                        <div class="middle">
-                            <a id="myBtn">Play Now <i class="fa-solid fa-gamepad fa-beat"></i></a>
+                    <div class="project-card">
+                        <div class="project-left">
+                            <div class="project-detail">
+                                <h2>Ez Fresh</h2>
+                                <p>E-commerce shop for fresh groceries and foods <q>Buy Smart, Buy Fresh</q></p>
+                            </div>
+                            <div class="tech-stacks">
+                                <span>
+                                    <i class="fa-solid fa-circle clr-php"></i>
+                                    <p>PHP</p>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-circle clr-bootstrap"></i>
+                                    <p>Bootstrap</p>
+                                </span>
+                            </div>
                         </div>
-                        <div class="bottom">
-                            <i class="fa-brands fa-html5" style="color: #fc4a0b;"></i>
-                            <i class="fa-brands fa-css3-alt" style="color: #3293d4;"></i>
-                            <i class=" fa-brands fa-js" style="color: #f7df1e;"></i>
+                        <div class="project-right">
+                            <a href="https://ezfresh.000webhostapp.com/index.php" target="_blank"><i
+                                    class="fa-solid fa-location-arrow"></i></a>
+                            <a href="https://github.com/sanishjoshi01/ezfresh" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
 
-                    <span class="tag-maker">
-                        <span class="tag-item">Game</span>
-                        <span class="tag-item">Mini Project</span>
-                    </span>
-                    <h2>Tic-Tac-Toe</h2>
-                    <p class="info">Play a game of Tic Tac Toe</p>
+                    <div class="project-card">
+                        <div class="project-left">
+                            <div class="project-detail">
+                                <h2>Demo Project</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit tempore, omnis
+                                    vero
+                                    quos hic, accusamus alias facere rem laudantium aliquam eos? Explicabo
+                                    temporibus et
+                                    vitae, optio nam maxime quibusdam saepe.</p>
+                            </div>
+                            <div class="tech-stacks">
+                                <span>
+                                    <i class="fa-solid fa-circle clr-ps"></i>
+                                    <p>Photoshop</p>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-circle clr-ai"></i>
+                                    <p>Illustrator</p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-right">
+                            <a href="https://ezfresh.000webhostapp.com/index.php" target="_blank"><i
+                                    class="fa-solid fa-location-arrow"></i></a>
+                            <a href="https://github.com/sanishjoshi01/ezfresh" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-left">
+                            <div class="project-detail">
+                                <h2>Demo Project</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit tempore, omnis
+                                    vero
+                                    quos hic, accusamus alias facere rem laudantium aliquam eos? Explicabo
+                                    temporibus et
+                                    vitae, optio nam maxime quibusdam saepe.</p>
+                            </div>
+                            <div class="tech-stacks">
+                                <span>
+                                    <i class="fa-solid fa-circle clr-laravel"></i>
+                                    <p>Laravel</p>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-circle clr-js"></i>
+                                    <p>JS</p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-right">
+                            <a href="https://ezfresh.000webhostapp.com/index.php" target="_blank"><i
+                                    class="fa-solid fa-location-arrow"></i></a>
+                            <a href="https://github.com/sanishjoshi01/ezfresh" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <section id="service-section">
+        <div class="service-container">
+            <div class="title center">
+                <h2 class="headings center">Services</h2>
+                <p class="para center">What Can I Do For You</p>
+            </div>
+            <div class="content">
+                <div class="service-cards">
+                    <div class="service-card">
+                        <img src="images/uiux.png" alt="services">
+                        <div class="service-detail">
+                            <h1>UI / UX Design</h1>
+                            <p>Designing the graphical interface and interactive components of a website.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/responsive.png" alt="services">
+                        <div class="service-detail">
+                            <h1>Responsiveness</h1>
+                            <p>Ensuring that websites are optimized for various devices and screen sizes.</p>
+                        </div>
 
-    <!-- CONTACT SECTION  -->
+                    </div>
+                    <div class="service-card">
+                        <img src="images/dev.png" alt="services">
+                        <div class="service-detail">
+                            <h1>Development</h1>
+                            <p>Translating the mockup design into code using different technical stacks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="contact-section">
-        <div class="content">
-            <h1 class="text-center main-title-heading">Contact</h1>
-            <div class="contact-content">
-                <!-- https://formspree.io/f/xdoqkzlk -->
-                <form action="https://formspree.io/f/xdoqkzlk" method="POST">
-                    <label for="nasme">Your name:</label>
-                    <input type="text" id="name" name="name" placeholder="What's your name?" required>
-                    <label for="email">Your email:</label>
-                    <input type="text" id="email" name="email" placeholder="What's your email?" required>
-                    <label for="message">Your message:</label>
-                    <textarea type="textarea" id="message" name="message" placeholder="What's your message?"
-                        required></textarea>
-                    <button type="submit">Send <i class="fa-regular fa-paper-plane"></i></button>
-                </form>
+        <div class="contact-container">
+            <div class="content">
+                <div class="contact-wrapper">
+                    <div class="contact-left">
+                        <h1>Let's Chat.<br>Get in <br>touch with me.</h1>
+                        <div id="mail">
+                            <i class="fa-regular fa-envelope"></i>
+                            <p>Mail me at<br><a
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=sandeshjoshi2211@gmail.com"
+                                    target="_blank">
+                                    sandeshjoshi2211@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/xzbndvvr" method="POST" id="form">
+                            <legend>Send me a message</legend>
+                            <input type="text" id="name" name="name" placeholder="Full name*" required>
+                            <input type="text" id="email" name="email" placeholder="Your email*" required>
+                            <input type="text" id="subject" name="subject" placeholder="Subject">
+                            <textarea name="message" id="message" placeholder="Say something?"></textarea>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+            <style>
+
+            </style>
         </div>
     </section>
-
+    <footer id="footer-section">
+        <div class="footer-section">
+            <div class="footer-info">
+                Copyright &#169; 2024<br>
+                Developed by <a href="#">Sandesh Joshi</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/sandesh-joshi-538110200/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/sanishjoshi01" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/Sanish.j1/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 

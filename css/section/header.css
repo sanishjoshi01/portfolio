@@ -1,131 +1,113 @@
-/* 
-    HEADER NAVIGATION
-*/
-body {
-    position: relative;
-    background-color: var(--primary-clr);
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-header {
+#header-section {
     position: sticky;
-    top: 20px;
-    z-index: 999;
+    top: 0;
+    z-index: 99999;
 }
 
-/* MOBILE NAV BAR  */
-.nav-bar {
+.header-container {
+    background-color: var(--clr-primary);
+    height: var(--header-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: min(90%, 1280px);
-    margin: 20px auto;
-    height: 50px;
-    padding: 0 1rem;
-    background-color: var(--secondary-clr);
-    position: relative;
-    box-shadow: 0 0 10px 0 var(--secondary-clr);
+    border-bottom: 1px solid var(--clr-secondary);
 }
 
-.left-nav {
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.left-nav:hover {
-    background-color: var(--clr-white);
-}
-
-.left-nav-content {
-    display: none;
-}
-
-.right-nav li a {
-    color: var(--primary-clr);
-    font-weight: 600;
+.header-container .logo a {
     text-transform: uppercase;
-    font-size: .9rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
 }
 
-.left-nav-content-one {
-    opacity: 0;
-    position: absolute;
-    color: var(--clr-white);
-    top: 50px;
-    left: 0;
-    width: 50vw;
-    padding: 0rem 1rem;
-    background-color: var(--secondary-clr);
-    box-shadow: 0 0 10px 0 var(--secondary-clr);
-    /* background-color: red; */
+.header-container .logo a img {
+    height: 30px;
+    width: 30px;
     transition: all .5s ease-in-out;
 }
 
-.left-nav-content-one li a {
-    color: var(--primary-clr);
-    font-weight: 600;
+.header-container .logo a:hover img {
+    transform: rotate(180deg);
+}
+
+.animate {
+    animation: aniLetter 3s ease-in infinite;
+    animation-delay: calc(.3s * var(--i));
+}
+
+@keyframes aniLetter {
+
+    0%,
+    40%,
+    100% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0;
+    }
+}
+
+.header-container .menu {
     text-transform: uppercase;
-    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    gap: 2.25rem;
+}
+
+.header-container .menu li:hover {
+    color: var(--clr-accent);
+}
+
+#btn {
+    right: 0;
+    position: absolute;
+    display: none;
+}
+
+.header-container {
+    position: relative;
+}
+
+.column-menu {
+    background-color: var(--clr-secondary);
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    padding: .875rem 1.25rem;
+    text-align: center;
+    width: 50%;
+}
+
+.column-menu li {
+    color: var(--clr-primary);
     line-height: 2rem;
 }
 
-.left-nav-content-one li a:hover {
-    color: var(--clr-white);
-}
-
-.active {
-    color: var(--clr-white) !important;
-}
-
-/* NAV BAR RESPONSIVENESS  */
-@media(min-width: 890px) {
-
-    /* DESKTOP NAV  */
-    .nav-bar {
-        width: 600px;
-        height: 50px;
-        border-radius: 30px;
-        margin: 20px auto;
-        background-color: var(--secondary-clr);
-        display: flex;
-        align-items: center;
-        box-shadow: 0 0 10px 0 var(--secondary-clr);
+@media (width < 1080px) {
+    #btn {
+        display: block;
     }
 
-    .theme-button {
-        cursor: pointer;
-        width: 40px;
-        text-align: center;
-        height: auto;
-    }
-
-    .right-nav {
+    .header-container .menu {
         display: none;
     }
 
-    .left-nav {
+    .header-container .column-menu {
+        display: block;
+    }
+}
+
+@media (width < 420px) {
+    .header-container .logo a span {
         display: none;
     }
 
-    .left-nav-content {
+    .column-menu {
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
     }
 
-    .nav-bar li a {
-        color: var(--primary-clr);
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: .9rem;
-    }
-
-    .nav-bar li a:hover {
-        color: var(--clr-white);
-    }
 }

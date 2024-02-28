@@ -1,0 +1,29 @@
+.footer-section {
+    height: 120px;
+    padding-block: 1.5rem;
+    color: var(--clr-white);
+    background-color: var(--clr-secondary);
+    text-align: center;
+}
+
+.footer-section .footer-info a {
+    color: var(--clr-accent);
+}
+
+.footer-section a:hover {
+    color: var(--clr-primary);
+    text-decoration: underline;
+}
+
+.footer-section .footer-socials {
+    margin-top: 1rem;
+}
+
+.footer-section .footer-socials a {
+    color: var(--clr-primary);
+    padding-inline: 1rem;
+}
+
+.footer-section .footer-socials a:hover {
+    color: var(--clr-accent);
+}

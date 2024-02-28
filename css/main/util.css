@@ -1,0 +1,78 @@
+section,
+header {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+section {
+    animation: fade-in linear both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.headings {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.para {
+    font-size: clamp(0.75rem, 4vw, 1.5rem);
+    font-weight: 300;
+    color: var(--clr-black-40-opac)
+}
+
+.content {
+    margin: 2rem 0;
+}
+
+.clr-html {
+    color: #e85823;
+}
+
+.clr-css {
+    color: #379ad6;
+}
+
+.clr-js {
+    color: #f0db4f;
+}
+
+.clr-bootstrap {
+    color: #563e7c;
+}
+
+.clr-github {
+    color: #171515;
+}
+
+.clr-php {
+    color: #3765af;
+}
+
+.clr-laravel {
+    color: #ef3b2d;
+}
+
+.clr-ai {
+    color: #320000;
+}
+
+.clr-ps {
+    color: #001e36;
+}
