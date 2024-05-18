@@ -1,9 +1,12 @@
 .footer-section {
-    height: 120px;
     padding-block: 1.5rem;
     color: var(--clr-white);
     background-color: var(--clr-secondary);
     text-align: center;
+}
+
+.footer-section .footer-info {
+    line-height: 1.5;
 }
 
 .footer-section .footer-info a {
