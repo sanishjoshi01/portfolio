@@ -47,7 +47,13 @@ const projects = [
         hostLink: "https://sanishjoshi01.github.io/TODO-APP/",
         gitLink: "https://github.com/sanishjoshi01/TODO-APP"
     },
-
+    {
+        title: "Simple Calculator",
+        description: "Basic Calculator",
+        techStack: ["HTML", "CSS", "JS"],
+        hostLink: "https://sanishjoshi01.github.io/CODSOFT/Calculator/index.html",
+        gitLink: "https://github.com/sanishjoshi01/CODSOFT"
+    },
 ];
 
 let projectEl = '';
